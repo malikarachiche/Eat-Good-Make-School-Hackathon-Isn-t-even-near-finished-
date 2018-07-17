@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import AlamofireImage
+import AlamofireNetworkActivityIndicator
 
 class ViewController: UIViewController {
 
