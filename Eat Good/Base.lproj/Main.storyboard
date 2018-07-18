@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xO-Oc-8Y8">
-                                <rect key="frame" x="96" y="439" width="182" height="39"/>
+                                <rect key="frame" x="16" y="563" width="343" height="39"/>
                                 <color key="backgroundColor" red="0.37180754542350769" green="0.21645230054855347" blue="0.07421710342168808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Get Cooking!">
@@ -34,20 +34,35 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIe-eT-ptE">
+                                <rect key="frame" x="145" y="130" width="85" height="39"/>
+                                <color key="backgroundColor" red="0.37180754542350769" green="0.21645230054855347" blue="0.07421710342168808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0n-N3-UHb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0xO-Oc-8Y8" secondAttribute="bottom" constant="140" id="0dy-gx-eX7"/>
-                            <constraint firstItem="0xO-Oc-8Y8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="HOK-JQ-Et5"/>
+                            <constraint firstItem="tIe-eT-ptE" firstAttribute="top" secondItem="YT5-aB-xwK" secondAttribute="bottom" constant="10" id="6j7-OW-iQZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tIe-eT-ptE" secondAttribute="trailing" constant="145" id="LLT-EE-MAm"/>
                             <constraint firstItem="YT5-aB-xwK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qfx-GG-wae"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xO-Oc-8Y8" secondAttribute="trailing" constant="16" id="bIq-x3-Ifd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0xO-Oc-8Y8" secondAttribute="bottom" constant="16" id="biW-ZI-OdO"/>
+                            <constraint firstItem="tIe-eT-ptE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="dah-cS-APN"/>
+                            <constraint firstItem="0xO-Oc-8Y8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fpv-2W-ohk"/>
                             <constraint firstItem="YT5-aB-xwK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iC8-8c-2Hg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YT5-aB-xwK" secondAttribute="trailing" id="nQz-yC-9kN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xO-Oc-8Y8" secondAttribute="trailing" constant="97" id="qGd-Bu-sJS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Eat Good" id="QY2-Fj-mGd"/>
                     <connections>
+                        <outlet property="addButtonoutlet" destination="tIe-eT-ptE" id="8UA-Cy-5dd"/>
                         <outlet property="cookingButton" destination="0xO-Oc-8Y8" id="m2e-bQ-Ava"/>
                         <outlet property="getCookingButton" destination="0xO-Oc-8Y8" id="xJD-Mq-k0S"/>
                         <outlet property="navigationBar" destination="QY2-Fj-mGd" id="gnc-QB-Xpq"/>
@@ -58,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="-837"/>
+            <point key="canvasLocation" x="1568.8" y="-837.03148425787117"/>
         </scene>
         <!--Search Results-->
         <scene sceneID="zuE-C2-fSv">
@@ -86,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5b-Aq-Azt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2793" y="-837"/>
+            <point key="canvasLocation" x="2508" y="-837"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="71U-DD-wPv">
@@ -112,7 +127,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ye-8I-hUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="-837"/>
+            <point key="canvasLocation" x="553" y="-837"/>
         </scene>
         <!--Most Viewed-->
         <scene sceneID="DCk-gy-RN2">
@@ -131,10 +146,14 @@
             </objects>
             <point key="canvasLocation" x="1569" y="1048"/>
         </scene>
-        <!--Favorites-->
+        <!--Favorites -->
         <scene sceneID="Cy8-TN-LcS">
             <objects>
+<<<<<<< HEAD
                 <viewController id="q63-B7-vhx" customClass="FavoritesViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
+=======
+                <viewController title="Favorites " id="q63-B7-vhx" sceneMemberID="viewController">
+>>>>>>> Malik
                     <navigationItem key="navigationItem" title="Favorites" id="rYO-VY-S9v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-nV-bP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,7 +178,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ug4-qJ-W4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="125"/>
+            <point key="canvasLocation" x="553" y="106"/>
         </scene>
         <!--Item-->
         <scene sceneID="Aab-6A-7qW">
@@ -183,7 +202,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cpf-H7-dfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="1048"/>
+            <point key="canvasLocation" x="553" y="1048"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t2t-aJ-3vg">
@@ -194,6 +213,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3k1-28-0Px">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.37180754542350769" green="0.21645230054855347" blue="0.07421710342168808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
