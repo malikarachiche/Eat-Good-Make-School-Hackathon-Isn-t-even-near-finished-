@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-<<<<<<< HEAD
+
     func processUrl(ingredients: [String]) -> String{
         var apiRecipePuppy = "http://www.recipepuppy.com/api/"
         var urlAddition = "?i="
@@ -49,10 +49,8 @@ class ViewController: UIViewController {
         return apiRecipePuppy
     }
 
-=======
     @IBAction func cookingButtonAction(_ sender: UIButton) {
     }
     
->>>>>>> master
 }
 
