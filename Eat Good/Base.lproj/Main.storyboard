@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BYZ-38-t0r" customClass="SearchIngridientsViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,8 +49,10 @@
                     <navigationItem key="navigationItem" title="Eat Good" id="QY2-Fj-mGd"/>
                     <connections>
                         <outlet property="cookingButton" destination="0xO-Oc-8Y8" id="m2e-bQ-Ava"/>
+                        <outlet property="getCookingButton" destination="0xO-Oc-8Y8" id="xJD-Mq-k0S"/>
                         <outlet property="navigationBar" destination="QY2-Fj-mGd" id="gnc-QB-Xpq"/>
                         <outlet property="searchBar" destination="YT5-aB-xwK" id="bqG-kt-7R9"/>
+                        <outlet property="searchIngridientsTextField" destination="YT5-aB-xwK" id="jhr-bA-a6H"/>
                         <segue destination="Y7r-gu-Dhj" kind="show" id="SQB-fW-38I"/>
                     </connections>
                 </viewController>
@@ -61,7 +63,7 @@
         <!--Search Results-->
         <scene sceneID="zuE-C2-fSv">
             <objects>
-                <viewController title="Search Results" id="Y7r-gu-Dhj" sceneMemberID="viewController">
+                <viewController title="Search Results" id="Y7r-gu-Dhj" customClass="SearchResultsViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7E2-6y-LCw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +117,7 @@
         <!--Most Viewed-->
         <scene sceneID="DCk-gy-RN2">
             <objects>
-                <viewController id="s3t-kd-ETR" sceneMemberID="viewController">
+                <viewController id="s3t-kd-ETR" customClass="MostViewedViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hde-dR-heV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +134,7 @@
         <!--Favorites-->
         <scene sceneID="Cy8-TN-LcS">
             <objects>
-                <viewController id="q63-B7-vhx" sceneMemberID="viewController">
+                <viewController id="q63-B7-vhx" customClass="FavoritesViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Favorites" id="rYO-VY-S9v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-nV-bP9" userLabel="First Responder" sceneMemberID="firstResponder"/>

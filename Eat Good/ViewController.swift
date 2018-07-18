@@ -38,7 +38,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Di spose of any resources that can be recreated.
     }
     
     
