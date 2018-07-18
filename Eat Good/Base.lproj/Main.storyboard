@@ -149,13 +149,9 @@
         <!--Favorites -->
         <scene sceneID="Cy8-TN-LcS">
             <objects>
-<<<<<<< HEAD
                 <viewController id="q63-B7-vhx" customClass="FavoritesViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
-=======
-                <viewController title="Favorites " id="q63-B7-vhx" sceneMemberID="viewController">
->>>>>>> Malik
-                    <navigationItem key="navigationItem" title="Favorites" id="rYO-VY-S9v"/>
                 </viewController>
+                
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-nV-bP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2508" y="124.58770614692655"/>
