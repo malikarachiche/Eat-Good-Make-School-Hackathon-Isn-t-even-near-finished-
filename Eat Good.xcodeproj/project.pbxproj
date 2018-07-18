@@ -18,6 +18,7 @@
 		4594627F20FD32A400FC6EFF /* Eat_GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594627E20FD32A400FC6EFF /* Eat_GoodTests.swift */; };
 		4594628A20FD32A400FC6EFF /* Eat_GoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594628920FD32A400FC6EFF /* Eat_GoodUITests.swift */; };
 		4B53C1C1FBC2E39310F10CDD /* Pods_Eat_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38ED95679121BFB57F6D843 /* Pods_Eat_Good.framework */; };
+		BEB607A620FEB3AD0007C679 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A520FEB3AD0007C679 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5A26CBB9D5F4CF5DA2172B71 /* Pods-Eat GoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodUITests/Pods-Eat GoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7676D02C71FCB5B57B49AB92 /* Pods-Eat GoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodUITests/Pods-Eat GoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		940C2436D005A12ABEDBBD43 /* Pods-Eat GoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodTests/Pods-Eat GoodTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEB607A520FEB3AD0007C679 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D38ED95679121BFB57F6D843 /* Pods_Eat_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A5826AD5734F9E7FD144A2 /* Pods_Eat_GoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_GoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45511F9769E7E8BCAFA91DF /* Pods-Eat GoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodTests/Pods-Eat GoodTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4594626620FD329F00FC6EFF /* AppDelegate.swift */,
+				BEB607A520FEB3AD0007C679 /* Recipe.swift */,
 				4594626820FD329F00FC6EFF /* ViewController.swift */,
 				4594626A20FD329F00FC6EFF /* Main.storyboard */,
 				4594627020FD32A400FC6EFF /* Assets.xcassets */,
@@ -387,6 +390,7 @@
 				4594626920FD329F00FC6EFF /* ViewController.swift in Sources */,
 				4594626720FD329F00FC6EFF /* AppDelegate.swift in Sources */,
 				4594626F20FD329F00FC6EFF /* Eat_Good.xcdatamodeld in Sources */,
+				BEB607A620FEB3AD0007C679 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
