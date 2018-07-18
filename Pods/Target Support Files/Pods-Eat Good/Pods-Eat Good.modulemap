@@ -1,0 +1,6 @@
+framework module Pods_Eat_Good {
+  umbrella header "Pods-Eat Good-umbrella.h"
+
+  export *
+  module * { export * }
+}
