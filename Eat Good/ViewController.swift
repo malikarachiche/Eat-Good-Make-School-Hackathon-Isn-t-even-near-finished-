@@ -26,8 +26,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     func processUrl(ingredients: [String]) -> String{
         var apiRecipePuppy = "http://www.recipepuppy.com/api/"
         var urlAddition = "?i="
