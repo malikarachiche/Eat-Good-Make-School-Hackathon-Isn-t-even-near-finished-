@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Premier Cooking App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksX-NU-w0f">
-                                <rect key="frame" x="59" y="433" width="257" height="29"/>
+                                <rect key="frame" x="59" y="420.5" width="257" height="41.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
                                 <color key="textColor" red="0.23886337876319885" green="0.72054660320281982" blue="0.083714030683040619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat Good" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-VM-MdQ">
-                                <rect key="frame" x="90" y="191" width="195" height="53.5"/>
+                                <rect key="frame" x="90" y="191" width="174" height="41.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="49"/>
                                 <color key="textColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,13 +34,13 @@
                         <color key="backgroundColor" red="0.37180754542350769" green="0.21645230054855347" blue="0.07421710342168808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ksX-NU-w0f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0By-UV-gDi"/>
-                            <constraint firstItem="ksX-NU-w0f" firstAttribute="top" secondItem="gAI-VM-MdQ" secondAttribute="bottom" constant="188.5" id="40d-Hw-GRB"/>
-                            <constraint firstItem="gAI-VM-MdQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="171" id="5l9-qI-TbN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gAI-VM-MdQ" secondAttribute="trailing" constant="90" id="7Vm-Rf-amK"/>
-                            <constraint firstItem="gAI-VM-MdQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JA8-59-2cH"/>
+                            <constraint firstItem="ksX-NU-w0f" firstAttribute="top" secondItem="gAI-VM-MdQ" secondAttribute="bottom" constant="188" id="AI0-NF-82U"/>
+                            <constraint firstItem="gAI-VM-MdQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="171" id="GrF-1Q-EGu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gAI-VM-MdQ" secondAttribute="trailing" constant="111" id="bdH-k5-qaE"/>
+                            <constraint firstItem="gAI-VM-MdQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="bxg-UH-wJA"/>
+                            <constraint firstItem="gAI-VM-MdQ" firstAttribute="height" secondItem="ksX-NU-w0f" secondAttribute="height" id="nko-0b-rAS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ksX-NU-w0f" secondAttribute="trailing" constant="59" id="pHp-bG-Xv5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ksX-NU-w0f" secondAttribute="bottom" constant="205" id="pLP-Q8-BRQ"/>
-                            <constraint firstItem="gAI-VM-MdQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="ugX-qK-ysP"/>
                             <constraint firstItem="ksX-NU-w0f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="xFN-Cw-W9t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

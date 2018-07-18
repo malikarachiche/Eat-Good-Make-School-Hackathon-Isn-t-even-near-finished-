@@ -69,6 +69,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rXL-p2-h4i">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,11 +86,11 @@
             </objects>
             <point key="canvasLocation" x="2863" y="93"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="71U-DD-wPv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWn-jZ-cEU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5ln-hz-ohe">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="5ln-hz-ohe">
                         <color key="badgeColor" red="0.23886337876319885" green="0.72054660320281982" blue="0.083714030683040619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -111,7 +112,24 @@
             </objects>
             <point key="canvasLocation" x="1076" y="102.99850074962519"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
+        <scene sceneID="DCk-gy-RN2">
+            <objects>
+                <viewController id="s3t-kd-ETR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hde-dR-heV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5hO-HI-iXO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="ZYs-kZ-m1y"/>
+                    <navigationItem key="navigationItem" id="qMf-RX-ksJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tI3-ub-wBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386.39999999999998" y="1071.8140929535234"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="Cy8-TN-LcS">
             <objects>
                 <viewController id="q63-B7-vhx" sceneMemberID="viewController">
@@ -126,11 +144,11 @@
                             <navigationItem title="Favorites" id="70E-FD-e2n"/>
                         </items>
                     </navigationBar>
-                    <tabBarItem key="tabBarItem" title="Item" id="rx1-yi-Kyp"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="rx1-yi-Kyp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-nV-bP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="921"/>
+            <point key="canvasLocation" x="1808.8" y="920.68965517241384"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HCv-qD-lfq">
@@ -144,14 +162,34 @@
                     <connections>
                         <segue destination="eWn-jZ-cEU" kind="relationship" relationship="viewControllers" id="c3O-9W-rNZ"/>
                         <segue destination="q63-B7-vhx" kind="relationship" relationship="viewControllers" id="ECb-YW-9kD"/>
+                        <segue destination="s3t-kd-ETR" kind="relationship" relationship="viewControllers" id="Mbx-bD-q5V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ug4-qJ-W4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="102.99850074962519"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Aab-6A-7qW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U7v-Hu-OPz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yAN-QA-l4o">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s3t-kd-ETR" kind="relationship" relationship="rootViewController" id="kiO-fV-PkC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cpf-H7-dfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552.79999999999995" y="1071.8140929535234"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="kiO-fV-PkC"/>
         <segue reference="7t7-ed-BgT"/>
     </inferredMetricsTieBreakers>
 </document>
