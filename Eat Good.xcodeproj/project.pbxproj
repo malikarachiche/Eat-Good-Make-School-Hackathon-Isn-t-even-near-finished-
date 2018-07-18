@@ -16,6 +16,8 @@
 		4594627F20FD32A400FC6EFF /* Eat_GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594627E20FD32A400FC6EFF /* Eat_GoodTests.swift */; };
 		4594628A20FD32A400FC6EFF /* Eat_GoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594628920FD32A400FC6EFF /* Eat_GoodUITests.swift */; };
 		4594629820FFA61900FC6EFF /* SearchIngridientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629720FFA61900FC6EFF /* SearchIngridientsViewController.swift */; };
+		4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */; };
+		4594629C20FFAA8100FC6EFF /* MostViewedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4594628920FD32A400FC6EFF /* Eat_GoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat_GoodUITests.swift; sourceTree = "<group>"; };
 		4594628B20FD32A400FC6EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4594629720FFA61900FC6EFF /* SearchIngridientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngridientsViewController.swift; sourceTree = "<group>"; };
+		4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				4594627520FD32A400FC6EFF /* Info.plist */,
 				4594626D20FD329F00FC6EFF /* Eat_Good.xcdatamodeld */,
 				4594629720FFA61900FC6EFF /* SearchIngridientsViewController.swift */,
+				4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */,
+				4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */,
 			);
 			path = "Eat Good";
 			sourceTree = "<group>";
@@ -263,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4594626920FD329F00FC6EFF /* ViewController.swift in Sources */,
+				4594629C20FFAA8100FC6EFF /* MostViewedViewController.swift in Sources */,
 				4594629820FFA61900FC6EFF /* SearchIngridientsViewController.swift in Sources */,
 				4594626720FD329F00FC6EFF /* AppDelegate.swift in Sources */,
+				4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */,
 				4594626F20FD329F00FC6EFF /* Eat_Good.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
