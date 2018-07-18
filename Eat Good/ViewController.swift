@@ -14,9 +14,11 @@ import AlamofireNetworkActivityIndicator
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var cookingButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print ("Testing")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+<<<<<<< HEAD
     func processUrl(ingredients: [String]) -> String{
         var apiRecipePuppy = "http://www.recipepuppy.com/api/"
         var urlAddition = "?i="
@@ -46,5 +49,10 @@ class ViewController: UIViewController {
         return apiRecipePuppy
     }
 
+=======
+    @IBAction func cookingButtonAction(_ sender: UIButton) {
+    }
+    
+>>>>>>> master
 }
 
