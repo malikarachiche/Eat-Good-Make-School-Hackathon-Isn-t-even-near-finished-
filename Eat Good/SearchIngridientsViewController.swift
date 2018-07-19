@@ -22,9 +22,9 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
     
     //var placeholder: String?
     
-    var testData = ["Malik", "Aktar", "Leith", "Ekow", "Owais", "Tushar", "Nathan"]
-    
+    var testData = ["Malik", "Aktar", "Leith", "Ekow", "Owais", "Tushar", "Nathan", "Adam", "Erik", "Boba Fett", "Sonny", "Roger"]
     var filteredData: [String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +33,7 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         homeTableView.isHidden = true
         homeTableView.dataSource = self
        
-
+        filteredData = testData
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,15 +41,29 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = homeTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = "erik"
-        
+//        cell.textLabel?.text = testData[indexPath.row]
+//        cell.textLabel?.text = performSearch(words: [testData[indexPath.row]], term: <#T##String#>)
+//        let filteredData  = data.filter { $0.contains(_ other: searchBar.text) }
+        cell.textLabel?.text = filteredData[indexPath.row]
         return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    
+        filteredData = searchText.isEmpty ? testData : testData.filter({(dataString: String) -> Bool in
+            // If dataItem matches the searchText, return true to include it
+            return dataString.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        
+        homeTableView.reloadData()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -59,10 +73,16 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         homeTableView.isHidden = true
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print ("LMFAOOOOOOOO")
+        
+    }
+    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
         homeTableView.isHidden = false
+        searchBar.text = ""
     }
     
     func performSearch(words: [String], term: String) -> [String] {
@@ -74,11 +94,7 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         }
         return results
     }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let results = performSearch(words: testData, term: searchText)
-        print (results)
-    }
+
     
     
     
