@@ -6,7 +6,11 @@
 //  Copyright © 2018 Malik Arachiche. All rights reserved.
 //
 
-import UIKit
+import UIKit 
+import SwiftyJSON
+import Alamofire
+import AlamofireImage
+import AlamofireNetworkActivityIndicator
 
 class ViewController: UIViewController, UISearchBarDelegate {
 
@@ -35,7 +39,29 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Di spose of any resources that can be recreated.
+    }
+    
+    
+    func processUrl(ingredients: [String]) -> String{
+        var apiRecipePuppy = "http://www.recipepuppy.com/api/"
+        var urlAddition = "?i="
+        
+        for i in ingredients {
+            var editedIngredientName = ""
+            if i.contains(" ") {
+                editedIngredientName = i.replacingOccurrences(of: " ", with: "+")
+            } else {
+                editedIngredientName = i
+            }
+            editedIngredientName.append("%2C+")
+            urlAddition.append(editedIngredientName)
+        }
+        
+        urlAddition.append("&q=")
+        apiRecipePuppy.append(urlAddition)
+        
+        return apiRecipePuppy
     }
     
     /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText:String){
