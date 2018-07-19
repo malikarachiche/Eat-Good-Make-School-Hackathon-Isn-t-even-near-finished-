@@ -17,15 +17,12 @@
 		4594627420FD32A400FC6EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4594627220FD32A400FC6EFF /* LaunchScreen.storyboard */; };
 		4594627F20FD32A400FC6EFF /* Eat_GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594627E20FD32A400FC6EFF /* Eat_GoodTests.swift */; };
 		4594628A20FD32A400FC6EFF /* Eat_GoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594628920FD32A400FC6EFF /* Eat_GoodUITests.swift */; };
-		BEB607A820FFB3970007C679 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A720FFB3970007C679 /* CoreDataHelper.swift */; };
-		4B53C1C1FBC2E39310F10CDD /* Pods_Eat_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38ED95679121BFB57F6D843 /* Pods_Eat_Good.framework */; };
 		4594629820FFA61900FC6EFF /* SearchIngridientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629720FFA61900FC6EFF /* SearchIngridientsViewController.swift */; };
 		4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */; };
 		4594629C20FFAA8100FC6EFF /* MostViewedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */; };
 		4B53C1C1FBC2E39310F10CDD /* Pods_Eat_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38ED95679121BFB57F6D843 /* Pods_Eat_Good.framework */; };
 		BEB607A820FFB3970007C679 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A720FFB3970007C679 /* CoreDataHelper.swift */; };
 		BEB607AA20FFCA600007C679 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A920FFCA600007C679 /* SearchResultsViewController.swift */; };
-		4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,9 +71,6 @@
 		E5A5826AD5734F9E7FD144A2 /* Pods_Eat_GoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_GoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45511F9769E7E8BCAFA91DF /* Pods-Eat GoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodTests/Pods-Eat GoodTests.release.xcconfig"; sourceTree = "<group>"; };
 		FCEAF6023CE56677FA67D7BB /* Pods_Eat_GoodUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_GoodUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4594629720FFA61900FC6EFF /* SearchIngridientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngridientsViewController.swift; sourceTree = "<group>"; };
-		4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

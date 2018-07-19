@@ -48,11 +48,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Eat Good" id="QY2-Fj-mGd"/>
                     <connections>
-                        <outlet property="cookingButton" destination="0xO-Oc-8Y8" id="m2e-bQ-Ava"/>
-                        <outlet property="getCookingButton" destination="0xO-Oc-8Y8" id="xJD-Mq-k0S"/>
-                        <outlet property="navigationBar" destination="QY2-Fj-mGd" id="gnc-QB-Xpq"/>
-                        <outlet property="searchBar" destination="YT5-aB-xwK" id="bqG-kt-7R9"/>
-                        <outlet property="searchIngridientsTextField" destination="YT5-aB-xwK" id="jhr-bA-a6H"/>
                         <segue destination="Y7r-gu-Dhj" kind="show" id="SQB-fW-38I"/>
                     </connections>
                 </viewController>
