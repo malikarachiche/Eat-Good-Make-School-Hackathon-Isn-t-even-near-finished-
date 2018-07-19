@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25AEA4102100654400B4CE0C /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AEA40F2100654400B4CE0C /* FavoriteTableViewController.swift */; };
 		26ACB95705FB93B04AD93280 /* Pods_Eat_GoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A5826AD5734F9E7FD144A2 /* Pods_Eat_GoodTests.framework */; };
 		2DA74CCA4CBEA675B3C02F9F /* Pods_Eat_GoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEAF6023CE56677FA67D7BB /* Pods_Eat_GoodUITests.framework */; };
 		4594626720FD329F00FC6EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594626620FD329F00FC6EFF /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		1100014A4DE71BC3135D8C2F /* Pods-Eat Good.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Good.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eat Good/Pods-Eat Good.release.xcconfig"; sourceTree = "<group>"; };
+		25AEA40F2100654400B4CE0C /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		4594626320FD329F00FC6EFF /* Eat Good.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eat Good.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4594626620FD329F00FC6EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4594626820FD329F00FC6EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */,
 				4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */,
 				BEB607A920FFCA600007C679 /* SearchResultsViewController.swift */,
+				25AEA40F2100654400B4CE0C /* FavoriteTableViewController.swift */,
 			);
 			path = "Eat Good";
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			files = (
 				BEB607A820FFB3970007C679 /* CoreDataHelper.swift in Sources */,
 				BEB607AA20FFCA600007C679 /* SearchResultsViewController.swift in Sources */,
+				25AEA4102100654400B4CE0C /* FavoriteTableViewController.swift in Sources */,
 				4594626920FD329F00FC6EFF /* ViewController.swift in Sources */,
 				4594629C20FFAA8100FC6EFF /* MostViewedViewController.swift in Sources */,
 				4594629820FFA61900FC6EFF /* SearchIngridientsViewController.swift in Sources */,
