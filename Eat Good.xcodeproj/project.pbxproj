@@ -20,6 +20,7 @@
 		4594629820FFA61900FC6EFF /* SearchIngridientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629720FFA61900FC6EFF /* SearchIngridientsViewController.swift */; };
 		4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */; };
 		4594629C20FFAA8100FC6EFF /* MostViewedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */; };
+		45A17D3D2101455B00324E88 /* SearchIngridientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A17D3C2101455B00324E88 /* SearchIngridientsTableViewCell.swift */; };
 		4B53C1C1FBC2E39310F10CDD /* Pods_Eat_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38ED95679121BFB57F6D843 /* Pods_Eat_Good.framework */; };
 		BEB607A820FFB3970007C679 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A720FFB3970007C679 /* CoreDataHelper.swift */; };
 		BEB607AA20FFCA600007C679 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A920FFCA600007C679 /* SearchResultsViewController.swift */; };
@@ -61,6 +62,7 @@
 		4594629720FFA61900FC6EFF /* SearchIngridientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngridientsViewController.swift; sourceTree = "<group>"; };
 		4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedViewController.swift; sourceTree = "<group>"; };
+		45A17D3C2101455B00324E88 /* SearchIngridientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngridientsTableViewCell.swift; sourceTree = "<group>"; };
 		587FF17F97C0375165F24B09 /* Pods-Eat Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eat Good/Pods-Eat Good.debug.xcconfig"; sourceTree = "<group>"; };
 		5A26CBB9D5F4CF5DA2172B71 /* Pods-Eat GoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodUITests/Pods-Eat GoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7676D02C71FCB5B57B49AB92 /* Pods-Eat GoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodUITests/Pods-Eat GoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */,
 				4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */,
 				BEB607A920FFCA600007C679 /* SearchResultsViewController.swift */,
+				45A17D3C2101455B00324E88 /* SearchIngridientsTableViewCell.swift */,
 			);
 			path = "Eat Good";
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				4594626920FD329F00FC6EFF /* ViewController.swift in Sources */,
 				4594629C20FFAA8100FC6EFF /* MostViewedViewController.swift in Sources */,
 				4594629820FFA61900FC6EFF /* SearchIngridientsViewController.swift in Sources */,
+				45A17D3D2101455B00324E88 /* SearchIngridientsTableViewCell.swift in Sources */,
 				4594626720FD329F00FC6EFF /* AppDelegate.swift in Sources */,
 				4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */,
 				4594626F20FD329F00FC6EFF /* Eat_Good.xcdatamodeld in Sources */,
