@@ -51,7 +51,6 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(recipeList.count)
         return recipeList.count
     }
     
