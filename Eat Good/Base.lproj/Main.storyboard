@@ -96,27 +96,27 @@
         <scene sceneID="zuE-C2-fSv">
             <objects>
                 <viewController title="Search Results" id="Y7r-gu-Dhj" customClass="SearchResultsViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7E2-6y-LCw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GxZ-nv-YUt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rXL-p2-h4i">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableView>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rXL-p2-h4i" firstAttribute="bottom" secondItem="0BD-5O-GIt" secondAttribute="bottom" id="D4v-4Q-IS0"/>
-                            <constraint firstItem="rXL-p2-h4i" firstAttribute="trailing" secondItem="0BD-5O-GIt" secondAttribute="trailing" id="ird-uL-OJz"/>
-                            <constraint firstItem="rXL-p2-h4i" firstAttribute="leading" secondItem="0BD-5O-GIt" secondAttribute="leading" id="kav-sM-T3o"/>
-                            <constraint firstItem="rXL-p2-h4i" firstAttribute="top" secondItem="0BD-5O-GIt" secondAttribute="top" id="sez-dA-1ad"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0BD-5O-GIt"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResultsCell" id="Mk3-XJ-FML">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mk3-XJ-FML" id="4LA-bF-Gb3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Y7r-gu-Dhj" id="opt-xi-dCL"/>
+                            <outlet property="delegate" destination="Y7r-gu-Dhj" id="2ac-1c-7Mr"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <outlet property="searchResultsTableView" destination="rXL-p2-h4i" id="gTW-j0-UGh"/>
+                        <outlet property="searchResultsTableView" destination="GxZ-nv-YUt" id="m9v-jk-1aQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5b-Aq-Azt" userLabel="First Responder" sceneMemberID="firstResponder"/>

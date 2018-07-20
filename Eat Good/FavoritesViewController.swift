@@ -17,7 +17,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var apiRecipePuppy = "http://www.recipepuppy.com/api/"
     let ingredients = ["milk", "eggs", "black pepper"]
-    var favoriteRecipeList: [Recipe] = [] {
+    var favoritesRecipeList: [Recipe] = [] {
         didSet {
             recipeTableView.reloadData()
         }
@@ -27,13 +27,13 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
         public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
-            return favoriteRecipeList.count
+            return favoritesRecipeList.count
         }
 
         public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
 
-            let recipe = favoriteRecipeList[indexPath.row]
+            let recipe = favoritesRecipeList[indexPath.row]
             cell.textLabel?.text = recipe.title
 //            cell.noteTitleLabel.text = recipe.ingredients
 //            cell.noteModificationTimeLabel.text = recipe.image
@@ -45,7 +45,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        favoriteRecipeList = CoreDataHelper.retrieveRecipes()
+        favoritesRecipeList = CoreDataHelper.retrieveRecipes()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -56,9 +56,9 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == .delete {
-            let recipeToDelete = self.favoriteRecipeList[indexPath.row]
+            let recipeToDelete = favoritesRecipeList[indexPath.row]
             CoreDataHelper.deleteRecipe(recipe: recipeToDelete)
-            self.favoriteRecipeList = CoreDataHelper.retrieveRecipes()
+            favoritesRecipeList = CoreDataHelper.retrieveRecipes()
         }
     }
 }

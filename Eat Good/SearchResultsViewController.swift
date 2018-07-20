@@ -13,13 +13,13 @@ import Alamofire
 import AlamofireImage
 import AlamofireNetworkActivityIndicator
 
-class SearchResultsViewController: UIViewController {
-    
-    @IBOutlet weak var searchResultsTableView: UITableView!
+class SearchResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var apiRecipePuppy = "http://www.recipepuppy.com/api/"
     let ingredients = ["milk", "eggs", "black pepper"]
     var recipeList: [RecipeModel] = []
+    
+    @IBOutlet var searchResultsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,9 @@ class SearchResultsViewController: UIViewController {
             case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    for i in 0...json["results"].count{
+                    for i in 0...(json["results"].count - 1) {
                         let newRecipe = RecipeModel(json: json["results"][i])
                         self.recipeList.append(newRecipe)
-                        print(self.recipeList[i].title)
                     }
                     self.searchResultsTableView.reloadData()
                 }
@@ -52,17 +51,17 @@ class SearchResultsViewController: UIViewController {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        print(recipeList.count)
         return recipeList.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "SearchResultsCell")
         
         let recipe = recipeList[indexPath.row]
         cell.textLabel?.text = recipe.title
-//        cell.noteTitleLabel.text = recipe.ingredients
-//        cell.noteModificationTimeLabel.text = recipe.image
+        //            cell.noteTitleLabel.text = recipe.ingredients
+        //            cell.noteModificationTimeLabel.text = recipe.image
         
         return cell
     }
