@@ -267,6 +267,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q63-B7-vhx" kind="relationship" relationship="rootViewController" id="Wvv-Sk-Kqp"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aS-Vq-bza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
