@@ -64,7 +64,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         return apiRecipePuppy
     }
     
-    /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText:String){
+    /* func searchBar(_ searchBar: UISearchBar, textDidChange searchText:String){
         filterContentForSearchText(searchText: searchText)
     }
     
@@ -77,8 +77,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 
             }
         }else { self.filteredData = self.data}
-    }
- */
+    } */
+ 
     @IBAction func cookingButtonAction(_ sender: UIButton) {
     }
     @IBAction func addButton(_ sender: UIButton) {

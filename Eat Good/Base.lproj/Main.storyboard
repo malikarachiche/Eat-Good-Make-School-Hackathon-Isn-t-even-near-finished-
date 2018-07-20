@@ -30,7 +30,7 @@
                                     <segue destination="Y7r-gu-Dhj" kind="show" id="7t7-ed-BgT"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YT5-aB-xwK">
+                            <searchBar contentMode="redraw" placeholder="Enter Ingredients!" translatesAutoresizingMaskIntoConstraints="NO" id="YT5-aB-xwK">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
