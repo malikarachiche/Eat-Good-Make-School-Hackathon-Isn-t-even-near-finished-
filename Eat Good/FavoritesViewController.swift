@@ -19,6 +19,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     let ingredients = ["milk", "eggs", "black pepper"]
     var recipeList: [RecipeModel] = []
     
+    
 //    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //
 //        return 5
@@ -38,15 +39,14 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
 //    }
     
         public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // 1
             
-            return self.recipeList.count
+            return recipeList.count
         }
 
         public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
 
-            let recipe = self.recipeList[indexPath.row]
+            let recipe = recipeList[indexPath.row]
             cell.textLabel?.text = recipe.title
 //            cell.noteTitleLabel.text = recipe.ingredients
 //            cell.noteModificationTimeLabel.text = recipe.image

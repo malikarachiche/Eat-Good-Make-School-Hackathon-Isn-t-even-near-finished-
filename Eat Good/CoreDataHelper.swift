@@ -38,7 +38,7 @@ struct CoreDataHelper {
         saveRecipe()
     }
     
-    static func retrieveNotes() -> [Recipe] {
+    static func retrieveRecipes() -> [Recipe] {
         do {
             let fetchRequest = NSFetchRequest<Recipe>(entityName: "Recipe")
             
