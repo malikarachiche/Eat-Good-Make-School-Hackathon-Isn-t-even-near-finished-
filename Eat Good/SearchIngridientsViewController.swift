@@ -30,6 +30,8 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
         searchBar.delegate = self
         homeTableView.delegate = self
         homeTableView.isHidden = true
