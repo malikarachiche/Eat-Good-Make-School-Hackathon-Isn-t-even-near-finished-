@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
   
@@ -16,13 +17,14 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var getCookingButton: UIButton!
-    @IBOutlet weak var addButton: UIButton!
-    
     @IBOutlet weak var homeTableView: UITableView!
     
     //var placeholder: String?
+    var chosenIngredients = [String]()
+    var testData: [String] = []
     
-    var testData = ["Malik", "Aktar", "Leith", "Ekow", "Owais", "Tushar", "Nathan", "Adam", "Erik", "Boba Fett", "Sonny", "Roger"]
+    
+    
     var filteredData: [String]!
     
     override func viewDidLoad() {
@@ -33,6 +35,17 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         homeTableView.isHidden = true
         homeTableView.dataSource = self
        
+        guard let jsonURL = Bundle.main.url(forResource: "ingredientsList", withExtension: "json") else {
+            print("Could not find ingredientsList.json!")
+            return
+        }
+        let jsonData = try! Data(contentsOf: jsonURL)
+        let userData = try! JSON(data: jsonData)
+        
+        for i in 0...(userData.count - 1) {
+            testData.append(userData[i].stringValue)
+        }
+        
         filteredData = testData
     }
     
@@ -74,7 +87,13 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print ("LMFAOOOOOOOO")
+        chosenIngredients.append(filteredData[indexPath.row])
+        print(chosenIngredients)
+        
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = ""
+        homeTableView.isHidden = true
         
     }
     
@@ -95,12 +114,6 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         return results
     }
 
-    
-    
-    
-    @IBAction func addButtonAction(_ sender: UIButton) {
-        print("Add button works")
-    }
     
     @IBAction func getCookingButtonAction(_ sender: UIButton) {
         print("Cooking button works")
