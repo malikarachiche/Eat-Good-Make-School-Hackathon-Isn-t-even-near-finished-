@@ -26,7 +26,7 @@
                                     <color key="titleColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cookingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ia-G5-r8f"/>
+                                    <action selector="getCookingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ged-hO-XRS"/>
                                     <segue destination="Y7r-gu-Dhj" kind="show" id="7t7-ed-BgT"/>
                                 </connections>
                             </button>
@@ -42,19 +42,37 @@
                                     <color key="titleColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0n-N3-UHb"/>
+                                    <action selector="addButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ub-ZA-iqu"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fem-Zt-tRG">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="j8D-vX-9zJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j8D-vX-9zJ" id="hsJ-b3-7ei">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.93174225091934204" green="0.84926968812942505" blue="0.68540161848068237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tIe-eT-ptE" firstAttribute="top" secondItem="YT5-aB-xwK" secondAttribute="bottom" constant="10" id="6j7-OW-iQZ"/>
+                            <constraint firstItem="fem-Zt-tRG" firstAttribute="top" secondItem="YT5-aB-xwK" secondAttribute="bottom" id="HUy-JY-vaH"/>
+                            <constraint firstItem="fem-Zt-tRG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IcZ-TH-nnc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tIe-eT-ptE" secondAttribute="trailing" constant="145" id="LLT-EE-MAm"/>
+                            <constraint firstItem="fem-Zt-tRG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OWt-Jr-431"/>
                             <constraint firstItem="YT5-aB-xwK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qfx-GG-wae"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xO-Oc-8Y8" secondAttribute="trailing" constant="16" id="bIq-x3-Ifd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0xO-Oc-8Y8" secondAttribute="bottom" constant="16" id="biW-ZI-OdO"/>
                             <constraint firstItem="tIe-eT-ptE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="dah-cS-APN"/>
                             <constraint firstItem="0xO-Oc-8Y8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fpv-2W-ohk"/>
+                            <constraint firstItem="fem-Zt-tRG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gve-fQ-zwf"/>
                             <constraint firstItem="YT5-aB-xwK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iC8-8c-2Hg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YT5-aB-xwK" secondAttribute="trailing" id="nQz-yC-9kN"/>
                         </constraints>
@@ -62,6 +80,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Eat Good" id="QY2-Fj-mGd"/>
                     <connections>
+                        <outlet property="addButton" destination="tIe-eT-ptE" id="DgP-fa-uL5"/>
+                        <outlet property="getCookingButton" destination="0xO-Oc-8Y8" id="zuP-6N-Auq"/>
+                        <outlet property="homeTableView" destination="fem-Zt-tRG" id="rHl-1w-NIn"/>
+                        <outlet property="homeView" destination="8bC-Xf-vdC" id="ELI-4P-ipg"/>
+                        <outlet property="searchBar" destination="YT5-aB-xwK" id="Cdh-jj-KSd"/>
                         <segue destination="Y7r-gu-Dhj" kind="show" id="SQB-fW-38I"/>
                     </connections>
                 </viewController>
@@ -130,7 +153,6 @@
                     <view key="view" contentMode="scaleToFill" id="hde-dR-heV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEe-Dh-tla">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
@@ -158,7 +180,6 @@
         <!--Favorites-->
         <scene sceneID="Cy8-TN-LcS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-nV-bP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="q63-B7-vhx" customClass="FavoritesViewController" customModule="Eat_Good" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="X4s-Zf-P14">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -181,6 +202,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="rYO-VY-S9v"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-nV-bP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2508" y="125"/>
         </scene>
@@ -245,9 +267,6 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="q63-B7-vhx" kind="relationship" relationship="rootViewController" id="8at-qT-CI7"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aS-Vq-bza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

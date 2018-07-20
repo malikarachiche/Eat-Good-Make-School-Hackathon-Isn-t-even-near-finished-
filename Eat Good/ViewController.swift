@@ -14,11 +14,7 @@ import AlamofireNetworkActivityIndicator
 
 class ViewController: UIViewController, UISearchBarDelegate {
 
-    @IBOutlet weak var navigationBar: UINavigationItem!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var cookingButton: UIButton!
-    @IBOutlet weak var addButtonoutlet: UIButton!
-    
+  
     
     var testData = ["Malik", "Aktar", "Leith", "Ekow", "Owais", "Tushar", "Nathan"]
     
@@ -30,9 +26,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-        
-        searchBar.delegate = self
-        searchBar.returnKeyType = UIReturnKeyType.done
         
         // Do any additional setup after loading the view, typically from a nib.
     }
