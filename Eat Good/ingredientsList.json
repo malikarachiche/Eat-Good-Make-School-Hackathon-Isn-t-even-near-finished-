@@ -1011,11 +1011,4 @@
 "butter lettuce",
 "juice"
 ]
- 
- //guard let jsonURL = Bundle.main.url(forResource: "ingredientsList", withExtension: "json") else {
-   //  print("Could not find ingredientsList.json!")
-   //  return
- //}
-// let jsonData = try! Data(contentsOf: jsonURL)
- //let userData = try! JSON(data: jsonData)
 

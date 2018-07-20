@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
   
@@ -22,11 +23,23 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
     
     //var placeholder: String?
     
-    var testData = ["Malik", "Aktar", "Leith", "Ekow", "Owais", "Tushar", "Nathan", "Adam", "Erik", "Boba Fett", "Sonny", "Roger"]
+    
+    var testData: [String] = []
     var filteredData: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let jsonURL = Bundle.main.url(forResource: "ingredientsList", withExtension: "json") else {
+            print("Could not find ingredientsList.json!")
+            return
+        }
+        let jsonData = try! Data(contentsOf: jsonURL)
+        let userData = try! JSON(data: jsonData)
+        
+        for i in 0...(userData.count - 1) {
+            testData.append(userData[i].stringValue)
+        }
         
         searchBar.delegate = self
         homeTableView.delegate = self
