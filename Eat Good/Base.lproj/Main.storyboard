@@ -115,6 +115,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0BD-5O-GIt"/>
                     </view>
+                    <connections>
+                        <outlet property="searchResultsTableView" destination="rXL-p2-h4i" id="gTW-j0-UGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5b-Aq-Azt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,6 +204,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="rYO-VY-S9v"/>
+                    <connections>
+                        <outlet property="recipeTableView" destination="X4s-Zf-P14" id="6ZG-M0-2rt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-nV-bP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

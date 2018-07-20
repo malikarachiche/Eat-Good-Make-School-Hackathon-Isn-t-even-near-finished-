@@ -15,6 +15,8 @@ import AlamofireNetworkActivityIndicator
 
 class SearchResultsViewController: UIViewController {
     
+    @IBOutlet weak var searchResultsTableView: UITableView!
+    
     var apiRecipePuppy = "http://www.recipepuppy.com/api/"
     let ingredients = ["milk", "eggs", "black pepper"]
     var recipeList: [RecipeModel] = []
@@ -29,13 +31,12 @@ class SearchResultsViewController: UIViewController {
             case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    
-                    if json["results"].count == 10 {
-                        for i in 0...9 {
-                            let newRecipe = RecipeModel(json: json["results"][i])
-                            self.recipeList.append(newRecipe)
-                        }
+                    for i in 0...json["results"].count{
+                        let newRecipe = RecipeModel(json: json["results"][i])
+                        self.recipeList.append(newRecipe)
+                        print(self.recipeList[i].title)
                     }
+                    self.searchResultsTableView.reloadData()
                 }
                 print("success")
             case .failure(let error):
@@ -50,21 +51,21 @@ class SearchResultsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // 1
-//        return recipeList.count
-//    }
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! RecipeTableViewCell
-//
-//        let recipe = recipeList[indexPath.row]
-//        cell.previewText.text = recipe.title
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return recipeList.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        
+        let recipe = recipeList[indexPath.row]
+        cell.textLabel?.text = recipe.title
 //        cell.noteTitleLabel.text = recipe.ingredients
 //        cell.noteModificationTimeLabel.text = recipe.image
-//
-//        return cell
-//    }
+        
+        return cell
+    }
     
     func processUrl(ingredients: [String]) -> String{
         var apiRecipePuppy = "http://www.recipepuppy.com/api/"
