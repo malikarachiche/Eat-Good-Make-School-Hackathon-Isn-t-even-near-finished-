@@ -21,11 +21,13 @@
 		4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */; };
 		4594629C20FFAA8100FC6EFF /* MostViewedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */; };
 		45A17D3D2101455B00324E88 /* SearchIngridientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A17D3C2101455B00324E88 /* SearchIngridientsTableViewCell.swift */; };
+		45A17D4121025A9300324E88 /* ingredientsList.json in Resources */ = {isa = PBXBuildFile; fileRef = 45A17D4021025A9300324E88 /* ingredientsList.json */; };
 		4B53C1C1FBC2E39310F10CDD /* Pods_Eat_Good.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38ED95679121BFB57F6D843 /* Pods_Eat_Good.framework */; };
 		BE57A7862100F6DD0085FA81 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57A7852100F6DD0085FA81 /* RecipeModel.swift */; };
 		BE57A78A210111710085FA81 /* ingredientsList.json in Resources */ = {isa = PBXBuildFile; fileRef = BE57A789210111700085FA81 /* ingredientsList.json */; };
 		BEB607A820FFB3970007C679 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A720FFB3970007C679 /* CoreDataHelper.swift */; };
 		BEB607AA20FFCA600007C679 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB607A920FFCA600007C679 /* SearchResultsViewController.swift */; };
+		BEBFBFEE2102C77C00C803D6 /* FavoriteRecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBFBFED2102C77C00C803D6 /* FavoriteRecipesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		4594629920FFAA6200FC6EFF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4594629B20FFAA8100FC6EFF /* MostViewedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedViewController.swift; sourceTree = "<group>"; };
 		45A17D3C2101455B00324E88 /* SearchIngridientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngridientsTableViewCell.swift; sourceTree = "<group>"; };
+		45A17D4021025A9300324E88 /* ingredientsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ingredientsList.json; sourceTree = "<group>"; };
 		587FF17F97C0375165F24B09 /* Pods-Eat Good.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat Good.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eat Good/Pods-Eat Good.debug.xcconfig"; sourceTree = "<group>"; };
 		5A26CBB9D5F4CF5DA2172B71 /* Pods-Eat GoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodUITests/Pods-Eat GoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7676D02C71FCB5B57B49AB92 /* Pods-Eat GoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodUITests/Pods-Eat GoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		BE57A789210111700085FA81 /* ingredientsList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ingredientsList.json; sourceTree = "<group>"; };
 		BEB607A720FFB3970007C679 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		BEB607A920FFCA600007C679 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		BEBFBFED2102C77C00C803D6 /* FavoriteRecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesTableViewCell.swift; sourceTree = "<group>"; };
 		D38ED95679121BFB57F6D843 /* Pods_Eat_Good.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_Good.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A5826AD5734F9E7FD144A2 /* Pods_Eat_GoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eat_GoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45511F9769E7E8BCAFA91DF /* Pods-Eat GoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eat GoodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eat GoodTests/Pods-Eat GoodTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			children = (
 				4594626620FD329F00FC6EFF /* AppDelegate.swift */,
 				BEB607A720FFB3970007C679 /* CoreDataHelper.swift */,
+				45A17D4021025A9300324E88 /* ingredientsList.json */,
 				4594626820FD329F00FC6EFF /* ViewController.swift */,
 				BE57A7852100F6DD0085FA81 /* RecipeModel.swift */,
 				4594626A20FD329F00FC6EFF /* Main.storyboard */,
@@ -147,6 +152,7 @@
 				BEB607A920FFCA600007C679 /* SearchResultsViewController.swift */,
 				BE57A789210111700085FA81 /* ingredientsList.json */,
 				45A17D3C2101455B00324E88 /* SearchIngridientsTableViewCell.swift */,
+				BEBFBFED2102C77C00C803D6 /* FavoriteRecipesTableViewCell.swift */,
 			);
 			path = "Eat Good";
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A17D4121025A9300324E88 /* ingredientsList.json in Resources */,
 				4594627420FD32A400FC6EFF /* LaunchScreen.storyboard in Resources */,
 				4594627120FD32A400FC6EFF /* Assets.xcassets in Resources */,
 				BE57A78A210111710085FA81 /* ingredientsList.json in Resources */,
@@ -418,6 +425,7 @@
 				4594626720FD329F00FC6EFF /* AppDelegate.swift in Sources */,
 				4594629A20FFAA6200FC6EFF /* FavoritesViewController.swift in Sources */,
 				4594626F20FD329F00FC6EFF /* Eat_Good.xcdatamodeld in Sources */,
+				BEBFBFEE2102C77C00C803D6 /* FavoriteRecipesTableViewCell.swift in Sources */,
 				BE57A7862100F6DD0085FA81 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

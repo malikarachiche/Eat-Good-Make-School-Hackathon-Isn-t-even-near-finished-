@@ -1,28 +1,27 @@
 //
-//  TableViewCell.swift
+//  FavoriteRecipesTableViewCell.swift
 //  Eat Good
 //
-//  Created by Malik Arachiche on 7/19/18.
+//  Created by Leith Reardon on 7/20/18.
 //  Copyright © 2018 Malik Arachiche. All rights reserved.
 //
 
 import UIKit
 
-class SearchIngridientsTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var recipeTitle: UILabel!
+class FavoriteRecipesTableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var favoriteRecipeImage: UIImageView!
+    @IBOutlet weak var favoriteRecipeTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
 }

@@ -14,18 +14,20 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
   
     let cellId = "cellIdentifier"
     
+    
+    
+    @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var getCookingButton: UIButton!
-    @IBOutlet weak var addButton: UIButton!
-    
     @IBOutlet weak var homeTableView: UITableView!
     
     //var placeholder: String?
-    
-    
+    var chosenIngredients = [String]()
     var testData: [String] = []
+
     var filteredData: [String]!
+    var currentIngredientNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,7 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         homeTableView.delegate = self
         homeTableView.isHidden = true
         homeTableView.dataSource = self
-       
+        ingredientsLabel.isHidden = false
         filteredData = testData
     }
     
@@ -54,7 +56,20 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "searchResultsSegue":
+            let destination = segue.destination as! SearchResultsViewController
+            destination.ingredients = chosenIngredients
+            chosenIngredients = []
+            currentIngredientNumber = 0
+            ingredientsLabel.text = ""
+        default:
+            print("unexpected segue identifier")
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData.count
@@ -83,16 +98,26 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = ""
-        homeTableView.isHidden = true
+        homeTableView.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print ("LMFAOOOOOOOO")
+        chosenIngredients.append(filteredData[indexPath.row])
+        print(chosenIngredients)
         
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.text = ""
+        homeTableView.isHidden = true
+        ingredientsLabel.isHidden = false
+        
+        ingredientsLabel.text?.append(chosenIngredients[currentIngredientNumber] + ", ")
+        currentIngredientNumber += 1
     }
     
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        ingredientsLabel.isHidden = true
         searchBar.showsCancelButton = true
         homeTableView.isHidden = false
         searchBar.text = ""
@@ -108,12 +133,6 @@ class SearchIngridientsViewController: UIViewController, UISearchBarDelegate, UI
         return results
     }
 
-    
-    
-    
-    @IBAction func addButtonAction(_ sender: UIButton) {
-        print("Add button works")
-    }
     
     @IBAction func getCookingButtonAction(_ sender: UIButton) {
         print("Cooking button works")

@@ -17,26 +17,26 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var apiRecipePuppy = "http://www.recipepuppy.com/api/"
     let ingredients = ["milk", "eggs", "black pepper"]
-    var favoritesRecipeList: [Recipe] = [] {
-        didSet {
-            recipeTableView.reloadData()
-        }
-    }
+    var favoriteRecipesList = CoreDataHelper.retrieveRecipes()
+    
+    
     
     @IBOutlet var recipeTableView: UITableView!
     
-        public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
-            return favoritesRecipeList.count
-        }
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return favoriteRecipesList.count
+    }
 
-        public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteRecipeCell", for: indexPath) as! FavoriteRecipesTableViewCell
 
-            let recipe = favoritesRecipeList[indexPath.row]
-            cell.textLabel?.text = recipe.title
-//            cell.noteTitleLabel.text = recipe.ingredients
-//            cell.noteModificationTimeLabel.text = recipe.image
+            let recipe = favoriteRecipesList[indexPath.row]
+            cell.favoriteRecipeTitle.text = recipe.title
+        
+            if recipe.image != "" {
+                cell.favoriteRecipeImage.af_setImage(withURL: URL(string: recipe.image!)!)
+            }
 
             return cell
         }
@@ -45,7 +45,8 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        favoritesRecipeList = CoreDataHelper.retrieveRecipes()
+        favoriteRecipesList = CoreDataHelper.retrieveRecipes()
+        recipeTableView.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -56,9 +57,16 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == .delete {
-            let recipeToDelete = favoritesRecipeList[indexPath.row]
+            let recipeToDelete = favoriteRecipesList[indexPath.row]
             CoreDataHelper.deleteRecipe(recipe: recipeToDelete)
-            favoritesRecipeList = CoreDataHelper.retrieveRecipes()
+            favoriteRecipesList = CoreDataHelper.retrieveRecipes()
+            recipeTableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if favoriteRecipesList[indexPath.row].link != "" {
+            UIApplication.shared.openURL(URL(string: favoriteRecipesList[indexPath.row].link!)!)
         }
     }
 }
